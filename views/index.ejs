@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Statistics</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="title-text">
+            <h1>COVID-19</h1>
+            <h2>Web site reporting covid statistics from all over the world</h2>
+        </div>
+        <img src="/images/covid.png" alt="SARS-CoV-2 image" width="200px">
+    </header>
+
+    <div class="index-container">
+        <div class="index-letter">
+            <h3>Search the country by the letter</h3>
+            <ul>
+                <% for (let letter = 'A'; letter <= 'Z'; letter = String.fromCharCode(letter.charCodeAt(0) + 1)) { %>
+                    <li><a href="#<%= letter %>"><%= letter %></a></li>
+                <% } %>
+            </ul>
+        </div>
+        <img src="/images/earth.png" alt="planet earth" width="200px">
+    </div>
+
+    <div class="info-body">
+        <div class="all-card">
+            <h3>All</h3> 
+            <ul>
+                <li>Total cases: <%= totalData.cases.total %></li>
+                <li>Total deaths: <%= totalData.deaths.total %></li>
+                <li>Recovered: <%= totalData.cases.recovered %></li>
+                <li>Active: <%= totalData.cases.active %></li>
+            </ul>
+        </div>
+
+        <% for (let letter = 'A'; letter <= 'Z'; letter = String.fromCharCode(letter.charCodeAt(0) + 1)) { %>
+            <h2 id="<%= letter %>"><%= letter %></h2>
+            <% data.forEach((countryData) => { %>
+                <% if (countryData.country.charAt(0) === letter && countryData.country !== 'all') { %>
+                    <div class="country-card">
+                        <h3 class="country-name"><%= countryData.country %></h3> 
+                        <ul>
+                            <li>Total cases: <%= countryData.cases.total %></li>
+                            <li>Total deaths: <%= countryData.deaths.total %></li>
+                            <li>Recovered: <%= countryData.cases.recovered %></li>
+                            <li>Active: <%= countryData.cases.active %></li>
+                        </ul>
+                    </div>
+                <% } %>
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>

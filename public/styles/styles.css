@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background: rgb(20,40,80);
+    background: linear-gradient(90deg, rgba(20,40,80,1) 0%, rgba(12,123,147,1) 50%, rgba(0,168,204,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.title-text {
+    color: #D6D2C4;
+}
+
+.title-text h1 {
+    font-weight: 500;
+}
+
+.title-text h2 {
+    font-weight: 300;
+    padding-right: 20px;
+}
+
+.index-container {
+    background: rgb(226,62,87);
+    background: linear-gradient(90deg, rgba(226,62,87,1) 0%, rgba(136,48,78,1) 50%, rgba(49,29,63,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.index-container img {
+    margin-left: 40px;
+}
+
+.index-letter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.index-letter h3 {
+    font-weight: 400;
+    font-size: 35px;
+    color: #00a8cc;
+    margin-bottom: 10px;
+}
+
+.index-letter ul {
+    padding: 0;
+    margin: 0;
+}
+
+.index-letter li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.index-letter a {
+    text-decoration: none;
+    color: #333;
+}
+
+.index-letter a:hover {
+    color: #46CDCF;
+}
+
+.info-body {
+    background: rgb(20,40,80);
+    background: linear-gradient(90deg, rgba(20,40,80,1) 0%, rgba(12,123,147,1) 50%, rgba(0,168,204,1) 100%);
+    color: #D6D2C4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-body h2 {
+    margin-top: 100px;
+}
+
+.country-card, .all-card {
+    margin-top: 10px;
+    background: rgb(226,62,87);
+    background: linear-gradient(90deg, rgba(226,62,87,1) 0%, rgba(136,48,78,1) 50%, rgba(49,29,63,1) 100%);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.country-card h3, .all-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.country-card ul, .all-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.country-card ul li, .all-card ul li {
+    margin-bottom: 10px;
+}
